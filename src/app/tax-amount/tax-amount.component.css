@@ -1,0 +1,59 @@
+.textxl{
+  font-weight: bold;
+  font-size: 20px;
+}
+.textL{
+  font-size: 16px;
+}
+
+.tax-input{
+  width: 220px;   
+  height: 45px;
+
+}
+
+@media (max-width: 1024px){
+  .textxl { font-size: 19px; }
+  .textL  { font-size: 15px; }
+  .tax-input{
+    width: 210px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 768px){
+  .textxl { font-size: 18px; }
+  .textL  { font-size: 14px; }
+  .tax-input{
+    width: 200px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 425px){
+
+  .textxl { font-size: 16px; }
+  .textL  { font-size: 13px; }
+  .tax-input{
+    width: 170px;   
+    height: 42px;
+  }
+}
+
+@media (max-width: 375px){
+  .textxl { font-size: 15px; }
+  .textL  { font-size: 12px; }
+  .tax-input{
+    width: 150px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 320px){
+  .textxl { font-size: 14px; }
+  .textL  { font-size: 11px; }
+  .tax-input{
+    width: 100px;   
+    height: 30px;
+  }
+}

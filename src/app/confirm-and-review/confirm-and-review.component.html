@@ -1,0 +1,137 @@
+<div class="container">
+    <div class="d-flex justify-content-center textxl">
+        <h1 class="textxl">Submit Tax Filing</h1>
+    </div>
+    <div class="d-flex justify-content-center ">
+        <div class="d-flex flex-column align-items-center">
+            <div class="rounded-circle d-flex justify-content-center align-items-center circle">
+                <p class="m-0">1</p>
+            </div>
+            <p class="mt-2">Input Detail</p>
+        </div>
+                <hr class="line">
+        <div class="d-flex flex-column align-items-center">
+            <div class="rounded-circle d-flex justify-content-center align-items-center circle">
+                <p class="m-0">2</p>
+            </div>
+            <div class="">
+            <p class="mt-2">Review & Confirm</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-box">
+        <div>
+            <div>
+            <p class="textxl">Tax Filing Detail</p>
+            <hr class="line2">
+            </div>
+             <div>
+            <div class="d-flex">
+                <div class="">
+                    <p class="textL">
+                        Type of Filing
+                    </p>
+                    </div>
+                    <div class="form-check ms-1">
+                    <p class="textL">
+                        {{filingType}}
+                    </p>
+                    </div>
+            </div>
+            </div>
+   </div>
+            <div class="d-flex">
+                <div>
+                    <p class="textL">VAT Month</p>
+                </div>
+                <div class="ms-5">
+                    <p>{{Moth}}</p>
+                </div>
+                <div class="ms-1">
+                    <p>{{Year}}</p>
+                </div>
+            </div>
+             <div class="mt-4">
+                <div class="justify-content-between d-flex w-100">
+                    <p class="textxl"> Tax Compution</p>
+                </div>            
+                <hr class="line2">
+            </div>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <p class="textL text-bold">Total value of taxable electronic service exclusive of VAT</p>
+                </div>
+                <div>
+                    <p class="textL">{{saleAmount | number:'1.2-2'}} THB</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <p class="textL text-bold">Total VAT to be remitted</p>
+                    <p class="textL">(7% of Total value of taxable electronic service exclusive of VAT)</p>
+                </div>
+                <div>
+                    <p class="textL"  >
+                        {{Tax | number:'1.2-2'}} THB
+                    </p>
+                </div>
+            </div>
+           <div class="d-flex justify-content-between">
+                <div>
+                    <p class="textL text-bold">Total Amount Payable</p>
+                </div>
+                <div>
+                    <p class="textL">{{Tax | number:'1.2-2'}} THB </p>
+                </div>
+           </div>
+           <div>
+           </div>
+             <div class="mt-4">
+                <div class="justify-content-between d-flex w-100">
+                    <p class="textxl">Declaration</p>
+                </div>            
+                <hr class="line2">
+                <div class="justify-content-between d-flex w-100">
+                    <p class="textL">I hereby declare that the information provided is true and agree to be bound by such information.</p>
+                </div>     
+            </div>
+    </div>
+    <div class="d-flex justify-content-center">
+       <button class="btn btn-dark mt-5 buntton" (click)="openModal()">
+        Confirm and Submit
+        </button>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade show custom-modal"
+     *ngIf="showUserModal">
+
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm Tax Data</h5>
+        <button type="button"
+                class="btn-close"
+                (click)="closeModal()"></button>
+      </div>
+
+      <div class="modal-body">
+        <pre>{{ TaxDatalAll | json }}</pre>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary"
+                (click)="closeModal()">Close</button>
+
+        <button class="btn btn-primary"
+                (click)="submit()">Confirm</button>
+      </div>
+
+    </div>
+  </div>
+</div>

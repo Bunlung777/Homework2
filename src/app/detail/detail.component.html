@@ -1,0 +1,89 @@
+
+<div class="container">
+    <div  *ngIf="Next=== '0'">
+<div class="d-flex justify-content-center textxl">
+  <h1>Submit Tax Filing</h1>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="d-flex flex-column align-items-center">
+    <div class="rounded-circle d-flex justify-content-center align-items-center circle">
+      <p class="m-0">1</p>
+    </div>
+    <p class="mt-2 step-text">Input Detail</p>
+  </div>
+
+  <hr class="line">
+
+  <div class="d-flex flex-column align-items-center">
+    <div class="rounded-circle d-flex justify-content-center align-items-center circle">
+      <p class="m-0">2</p>
+    </div>
+    <p class="mt-2 step-text">Review & Confirm</p>
+  </div>
+</div>
+
+
+    <div class="form-box">
+            <div>
+            <p class="textxl text-bold"> 1. Tax Filing Detail</p>
+            <hr class="line2">
+            </div>
+            <div>
+                <p class="textxl">Type of Filing<span class="text-danger">*</span></p>
+            </div>
+            <app-filing-type (changeType)="onFilingTypeChange($event)" [Next]="Next"></app-filing-type>
+            <div class="d-flex">
+                   <div *ngIf="filingType === '0'">
+             <p class="mt-5 textxl">VAT Month<span class="text-danger">*</span></p>
+             </div>
+            <div *ngIf="filingType === '1'">
+            <p class="mt-5 textxl">Tax Month<span class="text-danger">*</span></p>
+            </div>
+             <div *ngIf="filingType === '1'">
+                             <p class="mt-5 textxl Type">Type<span class="text-danger">*</span></p>
+                </div>
+
+             </div>
+            <div class="d-flex justify-content-start">
+                <app-month (changeMonth)="Month($event)"></app-month>
+                <app-year (OnYear)="Year($event)"></app-year>
+                <div *ngIf="filingType === '1'" class="ms-5">
+                    <select class="form-select input" aria-label="Default select example" >
+                    <option disabled>Select Month</option>
+                        <option 
+                        >
+                        On-Time
+                        </option>
+                    </select>
+                </div>
+            </div>
+             <div class="mt-5">
+                <div class="justify-content-between d-flex w-100">
+                    <p class="textxl text-bold"> 2. Tax Compution</p>
+                    <a href="#" class="ms-3 textL">View Exchange Rate</a>
+                </div>            
+                <hr class="line2">
+            </div>
+            <div>
+                <div>
+                    <p class="textL">Provide total taxable electronic service<span class="text-danger">*</span></p>
+                </div>
+            </div>
+                <app-sale-amount (changeVat)="onChangeVat($event)"></app-sale-amount>
+                <app-tax-amount [saleAmount]="saleAmount" (changeTax)="TotalSurcharge($event)" (changeTax)="Tax($event)"></app-tax-amount>
+
+           <div [hidden]="filingType !== '1'">
+                <app-surcharge [surcharge]="totalSurcharge" (surchargeValue)="onChangeSutcharge($event)"></app-surcharge>
+                <app-penalty (penalTyValue)="OnChangePenalty($event)"></app-penalty>
+                <app-total-amount [totalSurcharge]="surcharge" [totalPenalty]="penalty" [totalTax]="taxAmount"></app-total-amount>
+           </div>
+
+    </div>
+    </div>
+    <app-confirm-and-review [saleAmount]="saleAmount" [Tax]="taxAmount" [filingType]="filingType" *ngIf="Next === '1'" [Moth]="month" [Year]="year" [taxData]="taxData">  </app-confirm-and-review>
+    <div class="d-flex mt-5 box-button">
+            <button type="button" class="btn btn-white border-dark buntton" (click)="onNext('0')">Back</button>
+            <button type="button" class="btn btn-dark buntton ms-3" (click)="onNext('1')">Next</button>
+    </div>
+</div>

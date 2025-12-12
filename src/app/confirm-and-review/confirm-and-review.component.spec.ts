@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { ConfirmAndReviewComponent } from './confirm-and-review.component';
+
+describe('ConfirmAndReviewComponent', () => {
+  let component: ConfirmAndReviewComponent;
+  let fixture: ComponentFixture<ConfirmAndReviewComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [ConfirmAndReviewComponent]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(ConfirmAndReviewComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

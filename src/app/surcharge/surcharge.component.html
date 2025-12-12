@@ -1,0 +1,11 @@
+            <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="d-flex">
+                    <p class="text">3. Surcharge</p>
+                    <i class="bi bi-question-circle-fill ms-1 icon-size"></i>
+                </div>
+                <div class="d-flex">
+                    <input type="number" class="form-control tax-input" placeholder="Enter amount" [ngModel]="(valueSurcharge())" 
+                    [currencyMask]="Currency"
+                    readonly>
+                </div>
+            </div>

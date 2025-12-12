@@ -1,0 +1,13 @@
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="">
+                    <p class="textL">1. Total value of taxable electronic service exclusive of VAT</p>
+                </div>
+                <div class="d-flex flex-column ">
+                    <input type="text" class="form-control tax-input" placeholder="THB" [(ngModel)]="saleAmount" (ngModelChange)="onShow()" 
+                    [currencyMask]="Currency"
+                    (focus)="OnFocus()"
+                    (blur)="OnBlur()"
+                    >
+            </div>
+            </div>
+            

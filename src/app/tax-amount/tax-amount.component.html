@@ -1,0 +1,17 @@
+
+            <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="d-flex mt-2 ">
+                    <p class="textL">2. Total Vat to be remitted (7% of 1.)</p>
+                </div>
+                <div class="d-flex">
+                    <input type="text" class="form-control tax-input" placeholder="Enter amount"
+                    [(ngModel)]="taxAmount"
+                    [currencyMask]="Currency"      
+                    (focus)="OnFocus()"
+                    (blur)="OnBlur()"
+                    >
+                </div>
+                <div *ngIf="taxAmount!==null && (taxAmount < deleteAmount || taxAmount > plusAmount)">
+                <p class="text-danger textL">Invalid Tax</p>
+                  </div>
+            </div>

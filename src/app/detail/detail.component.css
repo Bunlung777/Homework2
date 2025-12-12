@@ -1,0 +1,129 @@
+.circle{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+.container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.line{
+    width: 100px;
+    height: 2px;
+    background-color: black;
+}
+.form-box{
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 800px;
+     margin: 0 auto; 
+}
+.line2{
+    height: 2px;
+}
+input[type = "radio"]:checked{
+    background-color: black;
+    border-color: black;
+}
+.buntton{
+    width: 150px;
+    border-radius: 20px;
+    height: 45px;
+}
+.box-button{
+    margin-left: 160px;
+}
+.textxl{
+    font-size: 20px;
+}
+.textL{
+    font-size: 16px;
+}
+.text-bold{
+    font-weight: bold;
+}
+.Type{
+    margin-left: 240px;
+}
+.input{ 
+    height: 50px;
+    width: 100px;
+  }
+@media (max-width: 1024px){
+  .form-box { padding: 18px; }
+  .textxl { font-size: 19px; }
+  .textL  { font-size: 15px; }
+  .user-icon { font-size: 30px; }
+  .icon-size { font-size: 17px; }
+  .input{
+    height: 44px;
+    width: 180px;
+  }
+  .Type{
+      margin-left:250px;
+  }
+  
+}
+
+@media (max-width: 768px){
+  .form-box { padding: 16px; }
+  .textxl { font-size: 18px; }
+  .textL  { font-size: 14px; }
+  .user-icon { font-size: 28px; }
+  .icon-size { font-size: 16px; }
+  .input{
+    height: 42px;
+    width: 160px;
+  }
+    .Type{
+        margin-left: 250px;
+    }
+}
+
+@media (max-width: 425px){
+  .form-box { padding: 12px; }
+  .textxl { font-size: 16px; }
+  .textL  { font-size: 14px; }
+  .user-icon { font-size: 26px; }
+  .icon-size { font-size: 15px; }
+  .input{
+    height: 42px;
+    width: 120px;
+  }
+    .Type{
+        margin-left: 180px;
+    }
+}
+
+@media (max-width: 375px){
+  .form-box { padding: 12px; }
+  .textxl { font-size: 14px; }
+  .textL  { font-size: 12px; }
+  .user-icon { font-size: 24px; }
+  .icon-size { font-size: 14px; }
+  .input{
+    height: 34px;
+    width: 100px;
+  }
+    .Type{
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 320px){
+  .form-box { padding: 10px; }
+  .textxl { font-size: 12px; }
+  .textL  { font-size: 11px; }
+  .user-icon { font-size: 22px; }
+  .icon-size { font-size: 13px; }
+  .input{
+    
+    height: 30px;
+    width: 50px;
+  }
+  .Type{
+    margin-left: 150px;
+  }
+  
+}
