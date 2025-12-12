@@ -27,6 +27,7 @@ export class SurchargeComponent implements OnChanges {
   Currency = {
   prefix: '',      
   thousands: ',',
+  suffix: 'THB',
   decimal: '.',
   align: 'right',
   precision: 2

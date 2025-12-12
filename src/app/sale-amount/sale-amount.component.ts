@@ -24,7 +24,8 @@ saleAmount: number = 0;
     console.log(this.saleAmount);
   }
   Currency = {
-  prefix: '',      
+  prefix: '',     
+  suffix: 'THB', 
   thousands: ',',
   decimal: '.',
   align: 'right',
@@ -33,6 +34,7 @@ saleAmount: number = 0;
 OnFocus() {
   this.Currency ={
     prefix: '',
+    suffix: 'THB',
     thousands: '',
     decimal: '.',
     align: 'right',
@@ -42,6 +44,7 @@ OnFocus() {
 OnBlur() {
   this.Currency ={
     prefix: '',
+    suffix: 'THB',
     thousands: ',',
     decimal: '.',
     align: 'right',

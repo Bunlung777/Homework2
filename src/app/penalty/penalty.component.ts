@@ -21,6 +21,7 @@ export class PenaltyComponent {
   }
   Currency = {
   prefix: '',      
+  suffix: 'THB',
   thousands: ',',
   decimal: '.',
   align: 'right',
