@@ -5,4 +5,4 @@
 5.กด Next จะไปหน้าสรุปค่า Total of Tax และ Total Vat
 6.กด Confirm and submit จะแสดง Modal Json
 
-ส่วนที่ทำไม่ทันคือ Responsive ทำไม่หมด และ validแล้วแต่ยังไม่ได้ทำให้กดหน้าถัดไปไม่ได้
+ส่วนที่ทำไม่ทันคือ Responsive ทำไม่หมด และ validแล้วแต่ยังไม่ได้ทำให้กดหน้าถัดไปไม่ได้ และ PlaceHolder ที่มีแค่ THB
